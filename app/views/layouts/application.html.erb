@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <% flash.each do |type , msg| %>
+      <div class="alert alert-<%type%>"><%= msg %></div>
+    <% end %>
+
+  <% if user_signed_in? %>
+    <h1>Yes</h1>    
+    <%= button_to 'Log_out', destroy_user_session_path , method: :delete , data: { confirm: " Are You sure wat to Logout" } ,class:"btn btn-danger" %>
+    <%= link_to 'edit', edit_user_registration_path , class:"btn btn-warning" %>
+  <% else %>
+    <h1>No</h1>
+
+    <%= link_to 'registration', new_user_registration_path , class:"btn btn-info" %>
+    <%= link_to 'login', new_user_session_path , class:"btn btn-success" %>
+
+  <% end %>
     <%= yield %>
   </body>
 </html>
