@@ -1,1 +1,58 @@
-<h3>Welcome Email to :  <%= @user.email  %></h3>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Our Platform</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Our Platform!</h1>
+    <p>Hello <%= @user.email %>,</p>
+    <p>We are excited to have you join our community. Thank you for signing up!</p>
+    <p>Feel free to explore our platform and reach out to us if you have any questions or need assistance.</p>
+    <%= image_tag 'https://source.unsplash.com/900x600/?' %>
+    <a href="<%= root_url %>" class="button">Get Started</a>
+    <p>Best Regards,<br> The Team</p>
+  </div>
+</body>
+</html>

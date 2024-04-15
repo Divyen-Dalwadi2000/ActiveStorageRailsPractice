@@ -76,3 +76,4 @@ gem "letter_opener"
 gem 'delayed_job_active_record'
 
 # gem "sidekiq"
+gem "sidekiq", "~> 7.2"
