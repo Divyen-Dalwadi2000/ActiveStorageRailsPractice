@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   private
   def send_welcome_email
-    WelcomeJob.perform_now(self)  
+    #  WelcomeJob.perform_now(self)  
+     WelcomeJob.set(wait: 2.minutes).perform_later(self)
   end
 end

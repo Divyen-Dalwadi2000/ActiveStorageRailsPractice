@@ -25,3 +25,12 @@ module ActiveJobPractice
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+
+# # config/application.rb
+# module MyApplication
+#   class Application < Rails::Application
+#     # make sure the adapter's gem has been included in your Gemfile.
+#     config.active_job.queue_adapter = :sidekiq
+#   end
+# end
