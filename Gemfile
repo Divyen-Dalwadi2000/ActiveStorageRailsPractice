@@ -68,3 +68,4 @@ end
 
 gem "devise", "~> 4.9"
 gem "bootstrap" , "~>5.1.3"
+gem "letter_opener"

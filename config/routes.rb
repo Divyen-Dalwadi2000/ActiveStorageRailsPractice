@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  root "pages#home"
   devise_for :users
-  #add new feature 
-  #hello world
+  root "pages#home"
 end
